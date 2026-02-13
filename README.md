@@ -12,46 +12,46 @@ Users can search for products using a search bar, and results update instantly b
 
 🧾 Product Modal
 
--Clicking a product opens a dynamic modal that allows users to:
+- Clicking a product opens a dynamic modal that allows users to:
 
--Select size
+- Select size
 
--Choose color
+- Choose color
 
--Adjust quantity
+- Adjust quantity
 
--Add product to cart
+- Add product to cart
 
 🛒 Add to Cart System
 
--Cart updates instantly
+- Cart updates instantly
 
--Cart count changes dynamically
+- Cart count changes dynamically
 
 ❤️ Wishlist Feature
 
--Users can add products to a wishlist, which is also stored locally.
+- Users can add products to a wishlist, which is also stored locally.
 
 🎨 Clean UI & Responsive Layout
 
--Sidebar navigation
+- Sidebar navigation
 
--Product grid layout
+- Product grid layout
 
--Smooth hover effects
+- Smooth hover effects
 
--Clean user experience
+- Clean user experience
 
--Responsive design for different screen sizes
+- Responsive design for different screen sizes
 
 🛠 Technologies Used
 
--HTML5
+- HTML5
 
--CSS3
+- CSS3
 
--JavaScript (ES6)
+- JavaScript (ES6)
 
--DOM Manipulation
+- DOM Manipulation
 
--LocalStorage for state management
+- LocalStorage for state management
