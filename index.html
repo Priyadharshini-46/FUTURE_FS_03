@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Aurelle Studio| Wear Confidence</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <h1>Aurelle Studio</h1>
+  <p>Wear Confidence</p>
+<input type="text" id="search" placeholder="Search for products..." onkeyup="searchProducts()">
+<div class="cart-icon" onclick="goToCart()">
+  🛒 <span id="cartCount">0</span>
+</div>
+<div class="auth-links">
+  <a href="login.html" id="loginLink">Login</a>
+  <span id="welcomeUser"></span>
+  <a href="#" onclick="logout()" id="logoutLink">Logout</a>
+</div>
+<a href="orders.html" class="orders-link">My Orders</a>
+<a href="wishlist.html" class="wishlist-link">Wishlist </a>
+
+
+</header>
+
+<!-- MAIN LAYOUT -->
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h3>MEN</h3>
+
+    <h4>Shirts</h4>
+    <ul>
+      <li onclick="filterProducts('all')">All Shirts</li>
+      <li onclick="filterProducts('plain')">Plain</li>
+      <li onclick="filterProducts('printed')">Printed</li>
+      <li onclick="filterProducts('checked')">Checked</li>
+      <li onclick="filterProducts('embroidery')">Embroidery</li>
+      <li onclick="filterProducts('formal')">Formal Plain</li>
+      <li onclick="filterProducts('satin')">Satin</li>
+    </ul>
+
+
+    <h4>T-Shirts</h4>
+    <ul>
+      <li onclick="filterProducts('half hand')">Half Hand</li>
+      <li onclick="filterProducts('full hand')">Full Hand</li>
+      <li onclick="filterProducts('tshirt-round')">Round Neck</li>
+      <li onclick="filterProducts('tshirt-collar')">Collared</li>
+      <li onclick="filterProducts('tshirt-printed')">Printed</li>
+      <li onclick="filterProducts('tshirt-jersey')">Jersey</li>
+    </ul>
+
+    <h4>Pants</h4>
+    <ul>
+      <li onclick="filterProducts('formal')">Formal</li>
+      <li onclick="filterProducts('cotton')">Cotton</li>
+      <li onclick="filterProducts('linen')">Linen</li>
+      <li onclick="filterProducts('jeans')">Jeans</li>
+    </ul>
+  </aside>
+
+  <!-- PRODUCTS -->
+  <section class="products">
+
+    <!-- PRODUCT CARD -->
+
+<div class="product-card plain">
+  <span class="wishlist-icon" onclick="addToWishlist(event,'Plain Shirt','casual-shirt1.jpeg')">❤️</span>
+  <img src="casual-shirt1.jpeg"
+       onclick="openModal('Plain Shirt','casual-shirt1.jpeg')">
+  <h3>Plain Shirt</h3>
+  <p>₹1299</p>
+</div>
+
+<div class="product-card checked">
+  <span class="wishlist-icon" onclick="addToWishlist(event,'Checked Shirt','checked-shirt1.jpeg')">❤️</span>
+  <img src="checked-shirt1.jpeg"
+       onclick="openModal('Checked Shirt','checked-shirt1.jpeg', 899)">
+  <h3>Checked Shirt</h3>
+  <p>₹899</p>
+</div>
+
+<div class="product-card printed">
+  <span class="wishlist-icon" onclick="addToWishlist(event,'Printed Shirt','printed-shirt1.jpeg')">❤️</span>
+  <img src="printed-shirt1.jpeg"
+       onclick="openModal('Printed Shirt','printed-shirt1.jpeg')">
+  <h3>Printed Shirt</h3>
+  <p>₹1399</p>
+</div>
+
+<div class="product-card embroidery">
+  <span class="wishlist-icon" onclick="addToWishlist(event,'Embroidered Shirt','embroidery-shirt.jpg')">❤️</span>
+  <img src="embroidery-shirt.jpg"
+       onclick="openModal('Embroidered Shirt','embroidery-shirt.jpg')">
+  <h3>Embroidered Shirt</h3>
+  <p>₹1799</p>
+</div>
+
+<div class="product-card formal">
+  <span class="wishlist-icon" onclick="addToWishlist(event,'Formal Shirt','formal-shirt1.jpeg')">❤️</span>
+  <img src="formal-shirt1.jpeg"
+       onclick="openModal('Formal Shirt','formal-shirt1.jpeg')">
+  <h3>Formal Shirt</h3>
+  <p>₹1599</p>
+</div>
+
+<div class="product-card satin">
+  <span class="wishlist-icon" onclick="addToWishlist(event,'Satin Shirt','satin-shirt.jpg')">❤️</span>
+  <img src="satin-shirt.jpg"
+       onclick="openModal('Satin Shirt','satin-shirt.jpg')">
+  <h3>Satin Shirt</h3>
+  <p>₹1899</p>
+</div>
+
+<div class="product-card tshirt-round">
+  <span class="wishlist-icon" onclick="addToWishlist(event,'Round Neck T-Shirt','round-neck1.jpeg')">❤️</span>
+  <img src="round-neck1.jpeg"
+       onclick="openModal('Round Neck T-Shirt','round-neck1.jpeg')">
+  <h3>Round Neck T-Shirt</h3>
+  <p>₹699</p>
+</div>
+
+<div class="product-card tshirt-collar">
+  <span class="wishlist-icon" onclick="addToWishlist(event,'Collared T-Shirt','collar-tshirt1.jpeg')">❤️</span>
+  <img src="collar-tshirt1.jpeg"
+       onclick="openModal('Collared T-Shirt','collar-tshirt1.jpeg')">
+  <h3>Collared T-Shirt</h3>
+  <p>₹899</p>
+</div>
+
+<div class="product-card tshirt-printed">
+  <span class="wishlist-icon" onclick="addToWishlist(event,'Printed T-Shirt','printed tshirt.jpg')">❤️</span>
+  <img src="printed tshirt.jpg"
+       onclick="openModal('Printed T-Shirt','printed tshirt.jpg')">
+  <h3>Printed T-Shirt</h3>
+  <p>₹799</p>
+</div>
+
+<div class="product-card tshirt-jersey">
+  <span class="wishlist-icon" onclick="addToWishlist(event,'Jersey T-Shirt','jersery.jpg')">❤️</span>
+  <img src="jersery.jpg"
+       onclick="openModal('Jersey T-Shirt','jersery.jpg')">
+  <h3>Jersey T-Shirt</h3>
+  <p>₹999</p>
+</div>
+
+<div class="product-card formal">
+  <span class="wishlist-icon" onclick="addToWishlist(event,'Formal Pants','formal-pant.jpg')">❤️</span>
+  <img src="formal-pant.jpg"
+       onclick="openModal('Formal Pants','formal-pant.jpg')">
+  <h3>Formal Pants</h3>
+  <p>₹1699</p>
+</div>
+
+<div class="product-card cotton">
+  <span class="wishlist-icon" onclick="addToWishlist(event,'Cotton Pants','cotton-pant1.jpeg')">❤️</span>
+  <img src="cotton-pant1.jpeg"
+       onclick="openModal('Cotton Pants','cotton-pant1.jpeg')">
+  <h3>Cotton Pants</h3>
+  <p>₹1499</p>
+</div>
+
+<div class="product-card linen">
+  <span class="wishlist-icon" onclick="addToWishlist(event,'Linen Pants','linen-pant.jpg')">❤️</span>
+  <img src="linen-pant.jpg"
+       onclick="openModal('Linen Pants','linen-pant.jpg')">
+  <h3>Linen Pants</h3>
+  <p>₹1799</p>
+</div>
+
+<div class="product-card jeans">
+  <span class="wishlist-icon" onclick="addToWishlist(event,'Jeans','jeans1.jpeg')">❤️</span>
+  <img src="jeans1.jpeg"
+       onclick="openModal('Jeans','jeans1.jpeg')">
+  <h3>Jeans</h3>
+  <p>₹1999</p>
+</div>
+
+  </section>
+</div>
+
+<!-- MODAL -->
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()" class="close">&times;</span>
+    <h2 id="productTitle"></h2>
+
+    <label>Size</label>
+    <select id="cartSize">
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+      <option>XXL</option>
+    </select>
+
+    <label>Color</label>
+    <select id="cartColor">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+    </select>
+<br><br>
+    <label>Quantity</label>
+    <input type="number" value="1" min="1">
+<button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+    <button class="buy-btn" onclick="buyNow()"> Buy Now</button>
+  </div>
+</div>
+
+<footer class="footer">
+Want Stunning Fits For Everyday Wear <br><br>
+CONTACT: 9876346098
+WHATSAPP: 9876346098
+<br><br>
+  © 2025 Aurelle Studio. All Rights Reserved.
+</footer>
+
+<script src="stock.js"></script>
+<script src="products.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

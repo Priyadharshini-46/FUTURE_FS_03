@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel | Aurelle Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>Admin Panel</h1>
+  <p>Manage Orders, Delivery & Exchanges</p>
+</header>
+
+<section class="orders-container">
+  <h2>All Orders</h2>
+  <div id="adminOrders"></div>
+</section>
+
+<section class="stock-container">
+  <h2>Manage Stock</h2>
+  <div id="adminStock"></div>
+</section>
+
+<div class="stock-box">
+  <h3>Update Stock</h3>
+
+  <select id="stockProduct">
+    <option>Plain Shirt</option>
+    <option>Printed Shirt</option>
+    <option>Round Neck T-Shirt</option>
+  </select>
+
+  <select id="stockSize">
+    <option>M</option>
+    <option>L</option>
+    <option>XL</option>
+    <option>XXL</option>
+  </select>
+
+  <input type="number" id="stockQty" min="0" placeholder="Quantity">
+
+  <button onclick="changeStock()">Update</button>
+</div>
+
+<button onclick="adminLogout()">Logout</button>
+
+<script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Orders | Aurelle Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>Aurelle Studio</h1>
+  <p>Wear Confidence</p>
+</header>
+
+<section class="orders-container">
+  <h2>My Orders</h2>
+  <div id="ordersList"></div>
+</section>
+
+<script src="orders.js"></script>
+
+<div id="exchangeModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeExchangeModal()">&times;</span>
+
+    <h3>Request Exchange</h3>
+
+    <label>Reason</label>
+    <select id="exchangeReason">
+      <option value="">Select reason</option>
+      <option>Size too small</option>
+      <option>Size too large</option>
+      <option>Color not liked</option>
+      <option>Defective product</option>
+    </select>
+
+    <label>New Size</label>
+    <select id="newSize">
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+      <option>XXL</option>
+    </select>
+
+    <label>New Color</label>
+    <select id="newColor">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+    </select>
+
+    <button class="buy-btn" onclick="submitExchange()">Submit Exchange</button>
+  </div>
+</div>
+
+</body>
+</html>

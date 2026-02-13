@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout | Aurelle Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>Aurelle Studio</h1>
+  <p>Wear Confidence</p>
+</header>
+
+<div class="checkout-container">
+
+  <!-- LEFT: ADDRESS -->
+  <div class="checkout-box">
+    <h2>Delivery Address</h2>
+
+    <input type="text" id="fullName" placeholder="Full Name">
+    <input type="text" id="mobile" placeholder="Mobile Number">
+    <input type="text" id="address" placeholder="Address">
+    <input type="text" id="city" placeholder="City">
+    <input type="text" id="pincode" placeholder="Pincode">
+  </div>
+
+  <!-- RIGHT: ORDER SUMMARY -->
+  <div class="checkout-box">
+    <h2>Order Summary</h2>
+
+    <div id="checkoutItems"></div>
+
+    <h3 id="checkoutTotal"></h3>
+
+  <h4>Payment Method</h4>
+<select id="paymentMethod">
+  <option value="upi">UPI</option>
+  <option value="card">Card</option>
+</select>
+
+<div id="upiFields">
+  <label>UPI ID</label>
+  <input type="text" id="upiId" placeholder="example@bank">
+</div>
+
+<div id="cardFields">
+  <label>Card Number</label>
+  <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+  <label>Expiry Date</label>
+  <input type="text" id="cardExpiry" placeholder="MM/YY">
+  <label>CVV</label>
+  <input type="password" id="cardCvv" placeholder="123">
+</div>
+
+    <button class="buy-btn" onclick="placeOrder()">Place Order</button>
+  </div>
+
+</div>
+
+<script src="checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exchange Request</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>Exchange Item</h1>
+</header>
+
+<div class="auth-container">
+  <div id="exchangeItem"></div>
+
+  <select id="reason">
+    <option value="">Reason for Exchange</option>
+    <option>Size Issue</option>
+    <option>Color Issue</option>
+    <option>Defective Product</option>
+  </select>
+
+  <select id="newSize">
+    <option value="">New Size</option>
+    <option>S</option>
+    <option>M</option>
+    <option>L</option>
+    <option>XL</option>
+  </select>
+
+  <select id="newColor">
+    <option value="">New Color</option>
+    <option>Black</option>
+    <option>White</option>
+    <option>Blue</option>
+  </select>
+
+  <button onclick="submitExchange()">Submit Exchange</button>
+</div>
+
+<script src="exchange-status.js"></script>
+</body>
+</html>
